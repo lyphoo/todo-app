@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Productive</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>Productive</h1>
+			<div class="filter">
+				<form id="searchBook">
+					<input id="searchBookTitle" type="text" />
+					<button id="searchSubmit" type="submit" title="cari buku"><img src="assets/img/search.svg" alt="Cari" title="cari buku" /></button>
+				</form>
+			</div>
+			<div class="menu">
+				<button class="addButton"><img src="assets/img/journal-plus.svg" alt="" /> Add Activity</button>
+				<button id="clearAllBook"><img src="assets/img/trash-white.svg" alt="" /> Clear</button>
+			</div>
+		</header>
+		<main>
+			<div class="inputContainer">
+				<div class="inputBox">
+					<h2>Masukkan Buku Baru</h2>
+					<button class="x"><img src="assets/img/x.svg" alt="x" /></button>
+					<form id="inputBook" name="inputBook">
+						<div class="input">
+							<label for="inputBookTitle">Activity name</label>
+							<input id="inputBookTitle" type="text" required />
+						</div>
+						<div class="input">
+							<label for="inputBookAuthor">Description</label>
+							<input id="inputBookAuthor" type="text" />
+						</div>
+						<div class="input">
+							<label for="inputBookYear">When Do it?</label>
+							<input id="inputBookYear" type="date" required />
+						</div>
+						<button id="bookSubmit" type="submit">Confirm</button>
+					</form>
+				</div>
+			</div>
+			<div class="info-box hidden"></div>
+			<p class="hidden">
+				menampilkan hasil pencarian untuk '<span></span>' <button title="berhenti mencari"><img src="assets/img/x.svg" alt="x" /></button>
+			</p>
+			<div class="rakContainer">
+				<section class="missing">
+					<h2><img src="assets/img/book.svg" alt="" /> Terlewat</h2>
+					<div id="yesterday" class="bookList"></div>
+				</section>
+				<section id="now">
+					<h2><img src="assets/img/book.svg" alt="" /> Hari Ini</h2>
+					<div id="incompleteBookshelfList" class="bookList"></div>
+				</section>
+				<section id="tomo">
+					<h2><img src="assets/img/book.svg" alt="" /> Tugas Kedepan</h2>
+					<div id="tomorrow" class="bookList"></div>
+				</section>
+				<section class="finished">
+					<h2><img src="assets/img/journal-check.svg" alt="" /> Selesai</h2>
+					<div id="completeBookshelfList" class="bookList"></div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<h3>Bookshelf &copy; 2023</h3>
+		</footer>
+		<div class="editContainer">
+			<div class="editBox">
+				<h2>Edit Buku</h2>
+				<button class="x2"><img src="assets/img/x.svg" alt="x" /></button>
+				<form id="editBook" name="editBook">
+					<input type="hidden" id="idBook" />
+					<div class="input">
+						<label for="editBookTitle">Judul</label>
+						<input id="editBookTitle" type="text" required />
+					</div>
+					<div class="input">
+						<label for="editBookAuthor">Description</label>
+						<input id="editBookAuthor" type="text" />
+					</div>
+					<div class="input">
+						<label for="editBookYear">Tahun</label>
+						<input id="editBookYear" type="date" required />
+					</div>
+					<button id="editSubmit" type="submit">Konfirmasi</button>
+				</form>
+			</div>
+		</div>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
